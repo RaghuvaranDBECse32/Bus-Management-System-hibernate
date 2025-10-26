@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bus_ticket_db?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">13082002</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Reduce verbose logs -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">false</property>
+
+        <!-- Automatically update DB schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Entity mappings -->
+        <mapping class="com.bus.entity.Bus"/>
+        <mapping class="com.bus.entity.Passenger"/>
+        <mapping class="com.bus.entity.Ticket"/>
+    </session-factory>
+</hibernate-configuration>
